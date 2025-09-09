@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | Services</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: #111;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Services Section */
+    .services {
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      position: relative;
+      padding: 120px 20px 50px;
+    }
+    .services::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .services-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    /* Services Grid */
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: rgba(255,255,255,0.12);
+      padding: 25px 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #ffd700;
+    }
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #000;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      nav a {
+        font-size: 13px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEWNkGcQU4ixmoL3wzMRF5DuVM-br3UgC65Uz5uvdSALi2pg6p8d5zKci7TT0v4yjmbYU8CQSiXNAC9CPNvGNLr&_nc_ohc=Vc3FrSI8T_MQ7kNvwE8hsQ8&_nc_oc=AdmwQtiRCnamXMyRkLm3C4ldtl-iTyUQpYmxIKkIeEzLeWMPpwXoUkh3mBbkBFYb11E&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=yEw44U7eEK5akBHIpsA9VQ&oh=00_AfY9aa-tSL9Hvsa5osyoACFgLTY53-31YM2skyYi0-7Qfg&oe=68C5937D" alt="Logo" class="logo">
+      <h1>My Website</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services-content">
+      <h2>My Services</h2>
+      <div class="service-list">
+        <!-- Row 1: Design & Development -->
+        <div class="service-card">
+          <h3>🌐 Web Design</h3>
+          <p>Modern, clean, and responsive designs that look great on all devices and engage your visitors effectively.</p>
+        </div>
+        <div class="service-card">
+          <h3>💻 Web Development</h3>
+          <p>Custom websites built with HTML, CSS, JavaScript, and frameworks for fast, secure, and reliable experiences.</p>
+        </div>
+        <div class="service-card">
+          <h3>🎨 Graphic Design</h3>
+          <p>Logos, posters, and branding materials that help you stand out with a strong visual identity.</p>
+        </div>
+        <!-- Row 2: Apps & Support -->
+        <div class="service-card">
+          <h3>📱 Mobile App Prototyping</h3>
+          <p>Interactive app prototypes that bring your ideas to life, allowing testing before full development.</p>
+        </div>
+        <div class="service-card">
+          <h3>🛠 Technical Support</h3>
+          <p>Maintenance, troubleshooting, and updates to keep your website running smoothly.</p>
+        </div>
+        <div class="service-card">
+          <h3>📊 Digital Solutions</h3>
+          <p>Tools, systems, and strategies to enhance productivity, workflows, and your online presence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

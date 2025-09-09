@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | Home</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 120px 20px 50px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 800px;
+    }
+    .hero-content h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .hero-content a {
+      background: #ffd700;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .hero-content a:hover {
+      background: #ffae00;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #000;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .hero-content h2 {
+        font-size: 36px;
+      }
+      .hero-content p {
+        font-size: 16px;
+      }
+      .hero-content a {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      nav a {
+        font-size: 13px;
+      }
+      .hero-content h2 {
+        font-size: 28px;
+      }
+      .hero-content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEWNkGcQU4ixmoL3wzMRF5DuVM-br3UgC65Uz5uvdSALi2pg6p8d5zKci7TT0v4yjmbYU8CQSiXNAC9CPNvGNLr&_nc_ohc=Vc3FrSI8T_MQ7kNvwE8hsQ8&_nc_oc=AdmwQtiRCnamXMyRkLm3C4ldtl-iTyUQpYmxIKkIeEzLeWMPpwXoUkh3mBbkBFYb11E&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=yEw44U7eEK5akBHIpsA9VQ&oh=00_AfY9aa-tSL9Hvsa5osyoACFgLTY53-31YM2skyYi0-7Qfg&oe=68C5937D" alt="Logo" class="logo">
+      <h1>My Website</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Website</h2>
+      <p>Showcasing creativity, design, and development in one place.</p>
+      <a href="portfolio.html">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEWNkGcQU4ixmoL3wzMRF5DuVM-br3UgC65Uz5uvdSALi2pg6p8d5zKci7TT0v4yjmbYU8CQSiXNAC9CPNvGNLr&_nc_ohc=Vc3FrSI8T_MQ7kNvwE8hsQ8&_nc_oc=AdmwQtiRCnamXMyRkLm3C4ldtl-iTyUQpYmxIKkIeEzLeWMPpwXoUkh3mBbkBFYb11E&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=yEw44U7eEK5akBHIpsA9VQ&oh=00_AfY9aa-tSL9Hvsa5osyoACFgLTY53-31YM2skyYi0-7Qfg&oe=68C5937D">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 35px;
+      height: 35px;
+      border-radius: 8px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #ffd700;
+      color: #000;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      min-height: 100vh;
+      background: url('https://www.bing.com/th/id/OIP.z7GSTlAn2gm6ND89HC136QHaEK?w=245&h=211&c=8&rs=1&qlt=70&o=7&cb=thws4&dpr=1.5&pid=3.1&rm=3') no-repeat center center/cover;
+      position: relative;
+      padding: 100px 15px 50px;
+    }
+    .portfolio::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .portfolio-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .portfolio h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .portfolio p.subtitle {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .portfolio-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .portfolio-card .card-content {
+      padding: 15px;
+      text-align: left;
+    }
+    .portfolio-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #ffd700;
+    }
+    .portfolio-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #000;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+        margin-top: 8px;
+      }
+      header h1 {
+        font-size: 18px;
+      }
+      .portfolio h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        padding: 5px 8px;
+        font-size: 14px;
+      }
+      .portfolio h2 {
+        font-size: 1.6rem;
+      }
+      .portfolio p.subtitle {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEWNkGcQU4ixmoL3wzMRF5DuVM-br3UgC65Uz5uvdSALi2pg6p8d5zKci7TT0v4yjmbYU8CQSiXNAC9CPNvGNLr&_nc_ohc=Vc3FrSI8T_MQ7kNvwE8hsQ8&_nc_oc=AdmwQtiRCnamXMyRkLm3C4ldtl-iTyUQpYmxIKkIeEzLeWMPpwXoUkh3mBbkBFYb11E&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=yEw44U7eEK5akBHIpsA9VQ&oh=00_AfY9aa-tSL9Hvsa5osyoACFgLTY53-31YM2skyYi0-7Qfg&oe=68C5937D" alt="Logo" class="logo">
+      <h1>My Website</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <div class="portfolio-content">
+      <h2>My Projects</h2>
+      <p class="subtitle">Here are some of my works showcasing design, development, and creativity.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="https://picsum.photos/600/400?random=1" alt="Web Design Project">
+          <div class="card-content">
+            <h3>Web Design Project</h3>
+            <p>A responsive website designed with modern UI/UX principles, ensuring seamless performance across devices.</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://picsum.photos/600/400?random=2" alt="Mobile App Prototype">
+          <div class="card-content">
+            <h3>Mobile App Prototype</h3>
+            <p>Interactive app mockup created with a clean interface, optimized for user-friendly navigation and usability.</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://picsum.photos/600/400?random=3" alt="E-commerce Platform">
+          <div class="card-content">
+            <h3>E-commerce Platform</h3>
+            <p>Developed an online store with secure checkout, product management system, and mobile-first design.</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://picsum.photos/600/400?random=4" alt="Branding & Graphics">
+          <div class="card-content">
+            <h3>Branding & Graphics</h3>
+            <p>Designed logos, posters, and social media graphics that helped businesses build strong visual identities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

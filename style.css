@@ -1,0 +1,77 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #e6f2ff);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0077cc;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+header h1 { font-size: 24px; }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+}
+nav a:hover { color: #ffcc00; }
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.container h2 { margin-bottom: 15px; color: #0077cc; }
+
+/* Lists */
+ul { list-style: none; padding: 0; }
+ul li { padding: 8px 0; }
+
+/* Portfolio */
+.project { margin-bottom: 25px; }
+.project h3 { color: #444; }
+
+/* Contact Form */
+form { display: grid; gap: 15px; margin-top: 15px; }
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #005fa3; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0077cc;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+}

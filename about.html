@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | About</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* About Section */
+    .about {
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      padding: 120px 20px 50px;
+    }
+    .about::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .about-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      background: rgba(0,0,0,0.55);
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .about-content h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffd700;
+    }
+    .about-content p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .about-content {
+        padding: 20px;
+      }
+      .about-content h2 {
+        font-size: 28px;
+      }
+      .about-content p {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      nav a {
+        font-size: 13px;
+      }
+      .about-content h2 {
+        font-size: 24px;
+      }
+      .about-content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/545595575_122112903290976753_4304983375431461163_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEWNkGcQU4ixmoL3wzMRF5DuVM-br3UgC65Uz5uvdSALi2pg6p8d5zKci7TT0v4yjmbYU8CQSiXNAC9CPNvGNLr&_nc_ohc=Vc3FrSI8T_MQ7kNvwE8hsQ8&_nc_oc=AdmwQtiRCnamXMyRkLm3C4ldtl-iTyUQpYmxIKkIeEzLeWMPpwXoUkh3mBbkBFYb11E&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=yEw44U7eEK5akBHIpsA9VQ&oh=00_AfY9aa-tSL9Hvsa5osyoACFgLTY53-31YM2skyYi0-7Qfg&oe=68C5937D" alt="Logo" class="logo">
+      <h1>My Website</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <h2>About This Website</h2>
+      <p>This website is designed as a simple yet modern 5-page template. It demonstrates how a clean structure and professional design can be applied to personal, business, or portfolio websites.</p>
+
+      <p>The site includes a <strong>Home</strong> page with a welcoming message, an <strong>About</strong> page explaining its purpose, a <strong>Services</strong> page outlining offerings, a <strong>Portfolio</strong> page to display projects, and a <strong>Contact</strong> page for easy communication.</p>
+
+      <p>Its main goal is to provide a solid foundation for anyone who wants a responsive, professional-looking website without complexity. The design ensures readability, usability, and a modern aesthetic that works seamlessly across desktop, tablet, and mobile devices.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
